@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    <h3>All Films</h3>
+    <h3>List of All Films</h3>
 
     @foreach($films as $film)
 
