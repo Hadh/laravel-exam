@@ -90,11 +90,7 @@ class FilmController extends Controller
     {
 
         $film = Film::find($id);
-        $film->nom = $request->input('nom');
-        $film->auteur = $request->input('auteur');
-        $film->date_sortie = $request->input('date_sortie');
-        $film->disponible = $request->input('disponible');
-        $film->genre_id = $request->input('genre_id');
+        $film->fill($request->all());
         $film->save();
         return redirect()->route('films.index')->with('success','Film Updated');
 
