@@ -9,8 +9,6 @@
     <div> Disponile :{{ $film->disponible }}</div>
     <div> Date Sortie :{{ $film->date_sortie }}</div>
     <hr>
-    <small>Written at {{$film->created_at}}</small>
-    <hr>
     @if(!Auth::guest())
 
 <a href="/films/{{$film->id}}/add_to_fav" class="btn btn-primary"> Add to Favourites</a>
